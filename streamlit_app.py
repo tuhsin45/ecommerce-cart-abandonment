@@ -11,12 +11,14 @@ from pathlib import Path
 import numpy as np
 from datetime import datetime
 
-    # Page configuration
+# Page configuration
 st.set_page_config(
     page_title="E-Commerce Cart Abandonment Analysis",
     layout="wide",
     initial_sidebar_state="expanded"
-)@st.cache_data
+)
+
+@st.cache_data
 def load_analysis_data():
     """Load the latest analysis dataset"""
     try:
@@ -151,7 +153,7 @@ def show_executive_summary(summary, df):
             marker=dict(colors=['#2ecc71', '#e74c3c'])
         )])
         fig_pie.update_layout(title="Order Completion vs Abandonment")
-        st.plotly_chart(fig_pie, use_container_width=True)
+        st.plotly_chart(fig_pie, width="stretch")
     
     with col2:
         # Cart value distribution
@@ -162,7 +164,7 @@ def show_executive_summary(summary, df):
             title="Cart Value Distribution",
             labels={'cart_value': 'Cart Value ($)', 'count': 'Number of Orders'}
         )
-        st.plotly_chart(fig_hist, use_container_width=True)
+        st.plotly_chart(fig_hist, width="stretch")
 
 def show_category_analysis(df):
     """Display category-wise analysis"""
@@ -188,11 +190,11 @@ def show_category_analysis(df):
         labels={'x': 'Product Category', 'y': 'Abandonment Rate'}
     )
     fig_bar.update_xaxes(tickangle=45)
-    st.plotly_chart(fig_bar, use_container_width=True)
+    st.plotly_chart(fig_bar, width="stretch")
     
     # Category data table
     st.subheader("Category Performance Details")
-    st.dataframe(category_stats, use_container_width=True)
+    st.dataframe(category_stats, width="stretch")
 
 def show_payment_analysis(df):
     """Display payment method analysis"""
@@ -212,11 +214,11 @@ def show_payment_analysis(df):
         title="Abandonment Rate by Payment Method",
         labels={'x': 'Payment Method', 'y': 'Abandonment Rate'}
     )
-    st.plotly_chart(fig_payment, use_container_width=True)
+    st.plotly_chart(fig_payment, width="stretch")
     
     # Payment method data
     st.subheader("Payment Method Performance")
-    st.dataframe(payment_stats, use_container_width=True)
+    st.dataframe(payment_stats, width="stretch")
 
 def show_geographic_analysis(df):
     """Display geographic analysis"""
@@ -240,11 +242,11 @@ def show_geographic_analysis(df):
         title="Top 15 States by Abandonment Rate",
         labels={'x': 'State', 'y': 'Abandonment Rate'}
     )
-    st.plotly_chart(fig_states, use_container_width=True)
+    st.plotly_chart(fig_states, width="stretch")
     
     # State data table
     st.subheader("State Performance Details")
-    st.dataframe(state_stats, use_container_width=True)
+    st.dataframe(state_stats, width="stretch")
 
 def show_detailed_data(df):
     """Display detailed data exploration"""
@@ -271,7 +273,7 @@ def show_detailed_data(df):
     
     # Sample data
     st.subheader("Sample Data")
-    st.dataframe(df.head(100), use_container_width=True)
+    st.dataframe(df.head(100), width="stretch")
     
     # Download option
     csv = df.to_csv(index=False)
