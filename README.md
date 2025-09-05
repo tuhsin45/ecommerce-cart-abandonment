@@ -31,9 +31,10 @@ The analysis uses the Olist Brazilian E-Commerce Public Dataset, consisting of:
 - Interactive visualizations with Plotly
 
 ### Dashboard
-- Flask web application for interactive analysis
+- Streamlit web application for interactive analysis
 - Real-time metrics and KPI tracking
 - Geographic and temporal pattern visualization
+- Live deployment available at: https://ecommerce-cart-abandonment.streamlit.app/
 
 ## Key Findings
 
@@ -64,27 +65,36 @@ The analysis uses the Olist Brazilian E-Commerce Public Dataset, consisting of:
 ## Technology Stack
 
 - **SQL**: Database operations and core analytics
-- **Python**: pandas, numpy, scikit-learn, plotly
-- **Flask**: Web dashboard and API endpoints
-- **HTML/CSS**: Frontend dashboard interface
+- **Python**: pandas, numpy, plotly for data analysis and visualization
+- **Streamlit**: Interactive web dashboard framework
+- **GitHub**: Version control and project hosting
 
 ## Project Structure
 
 ```
 ecom/
-├── app.py                    # Flask dashboard application
+├── streamlit_app.py          # Interactive Streamlit dashboard
 ├── data/                     # Olist dataset files
 ├── project/sql_scripts/      # SQL analysis queries
 ├── reports/                  # Generated analysis results
-├── templates/                # Dashboard HTML templates
 └── requirements.txt          # Python dependencies
 ```
 
-## Usage
+## Live Dashboard
 
-1. Install dependencies: `pip install -r requirements.txt`
-2. Start dashboard: `python app.py`
-3. Access analysis at `http://localhost:5000`
+**Interactive Analysis Dashboard:** https://ecommerce-cart-abandonment.streamlit.app/
+
+The dashboard features:
+- Executive summary with key performance indicators
+- Interactive category and payment method analysis
+- Geographic performance insights
+- Detailed data exploration capabilities
+
+## Local Development
+
+1. Clone repository: `git clone https://github.com/tuhsin45/ecommerce-cart-abandonment.git`
+2. Install dependencies: `pip install -r requirements.txt`
+3. Run locally: `streamlit run streamlit_app.py`
 
 ## Results
 
