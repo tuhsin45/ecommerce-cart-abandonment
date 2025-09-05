@@ -249,7 +249,17 @@ def serve_reports(filename):
 
 if __name__ == '__main__':
     print("Starting Cart Abandonment Analysis Dashboard...")
-    print("Dashboard will be available at: http://localhost:5000")
-    print("API endpoints available at: http://localhost:5000/api/")
     
-    app.run(debug=True, host='localhost', port=5000)
+    # Production vs Development configuration
+    import os
+    port = int(os.environ.get('PORT', 5000))
+    host = os.environ.get('HOST', '0.0.0.0')
+    debug = os.environ.get('FLASK_ENV', 'production') != 'production'
+    
+    if debug:
+        print("Dashboard will be available at: http://localhost:5000")
+        print("API endpoints available at: http://localhost:5000/api/")
+        app.run(debug=True, host='localhost', port=5000)
+    else:
+        print(f"Production mode - Dashboard available on port {port}")
+        app.run(debug=False, host=host, port=port)
