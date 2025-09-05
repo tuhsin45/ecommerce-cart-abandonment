@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Cart Abandonment Analysis</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .sidebar {
+            background: #f8f9fa;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .main-content {
+            padding: 20px;
+        }
+        .nav-link.active {
+            background-color: #007bff;
+            color: white !important;
+        }
+        .feature-box {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-2 sidebar">
+                <h4>Navigation</h4>
+                <nav class="nav flex-column">
+                    <a class="nav-link" href="/">Dashboard</a>
+                    <a class="nav-link active" href="/about">About Analysis</a>
+                    <a class="nav-link" href="/reports">Reports</a>
+                </nav>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-10 main-content">
+                <h1>About Cart Abandonment Analysis</h1>
+                
+                <div class="feature-box">
+                    <h3>Project Overview</h3>
+                    <p>This comprehensive analysis examines cart abandonment patterns in the Brazilian E-Commerce dataset from Olist. The project provides actionable insights to help businesses reduce cart abandonment and increase revenue conversion.</p>
+                </div>
+
+                <div class="feature-box">
+                    <h3>Analysis Features</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Data Processing</h5>
+                            <ul>
+                                <li>99,000+ order records analyzed</li>
+                                <li>Multi-table data integration</li>
+                                <li>Real-time cart status classification</li>
+                                <li>Product category mapping</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>Key Metrics</h5>
+                            <ul>
+                                <li>Overall abandonment rate calculation</li>
+                                <li>Revenue impact assessment</li>
+                                <li>Category-wise performance analysis</li>
+                                <li>Geographic pattern identification</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-box">
+                    <h3>Technical Stack</h3>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <h5>Data Processing</h5>
+                            <ul>
+                                <li>Python 3.8+</li>
+                                <li>Pandas for data manipulation</li>
+                                <li>NumPy for calculations</li>
+                                <li>SQL for database operations</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Visualization</h5>
+                            <ul>
+                                <li>Plotly for interactive charts</li>
+                                <li>Matplotlib for static plots</li>
+                                <li>Seaborn for statistical graphics</li>
+                                <li>Flask for web dashboard</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4">
+                            <h5>Analysis Methods</h5>
+                            <ul>
+                                <li>Descriptive statistics</li>
+                                <li>Cohort analysis</li>
+                                <li>Geographic segmentation</li>
+                                <li>Payment method analysis</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-box">
+                    <h3>Business Value</h3>
+                    <p>This analysis provides clear, actionable insights that can help businesses:</p>
+                    <ul>
+                        <li><strong>Reduce Cart Abandonment:</strong> Identify and address the primary causes of cart abandonment</li>
+                        <li><strong>Increase Revenue:</strong> Recover lost sales through targeted interventions</li>
+                        <li><strong>Optimize User Experience:</strong> Improve checkout processes based on data-driven insights</li>
+                        <li><strong>Strategic Planning:</strong> Make informed decisions about product portfolio and market focus</li>
+                    </ul>
+                </div>
+
+                <div class="feature-box">
+                    <h3>Data Sources</h3>
+                    <p>The analysis is based on the Olist Brazilian E-Commerce Public Dataset, which includes:</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Order information (99,441 orders)</li>
+                                <li>Customer demographics</li>
+                                <li>Product categories and details</li>
+                                <li>Payment transaction data</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Order fulfillment tracking</li>
+                                <li>Geographic location data</li>
+                                <li>Seller information</li>
+                                <li>Review and rating data</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-box">
+                    <h3>How to Use This Dashboard</h3>
+                    <ol>
+                        <li><strong>Dashboard:</strong> View real-time metrics and interactive charts</li>
+                        <li><strong>API Endpoints:</strong> Access raw data programmatically</li>
+                        <li><strong>Reports:</strong> Download detailed analysis results</li>
+                        <li><strong>Refresh:</strong> Data updates automatically every 5 minutes</li>
+                    </ol>
+                </div>
+
+                <div class="alert alert-info">
+                    <h5>API Endpoints Available:</h5>
+                    <ul class="mb-0">
+                        <li><code>/api/summary</code> - Overall statistics</li>
+                        <li><code>/api/categories</code> - Category analysis</li>
+                        <li><code>/api/payments</code> - Payment method analysis</li>
+                        <li><code>/api/states</code> - Geographic analysis</li>
+                        <li><code>/api/charts/*</code> - Chart data</li>
+                    </ul>
+                </div>
+
+                <footer class="mt-5 text-center text-muted">
+                    <p>Cart Abandonment Analysis Dashboard | Powered by Flask, Python, and Plotly</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
